@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>live.samkemp.plugin.hardcore</groupId>
-    <artifactId>Hardcore</artifactId>
+    <artifactId>SudoHardcore</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
