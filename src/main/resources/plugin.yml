@@ -1,7 +1,6 @@
 name: Hardcore
 version: ${project.version}
 main: live.samkemp.plugin.hardcore.hardcore.Hardcore
-api-version: 1.13
-depend: [ProtocolLib
+api-version: 1.14
 authors: [SamKemp]
 description: A plugin that makes a server sudo-hardcore
