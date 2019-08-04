@@ -17,8 +17,6 @@ public class MyListeners implements Listener
 
         event.getPlayer().getInventory().clear();
 
-        event.setRespawnLocation(RespawnLocation);
-
         World NewWorld = new WorldCreator("World" + Hardcore.NoDeaths).generateStructures(true).type(WorldType.NORMAL).createWorld();
         NewWorld.setDifficulty(Difficulty.HARD);
         NewWorld.setKeepSpawnInMemory(false);
@@ -28,6 +26,6 @@ public class MyListeners implements Listener
 
         RespawnLocation = NewWorld.getSpawnLocation();
 
-        event.getPlayer().teleport(RespawnLocation);
+        event.setRespawnLocation(RespawnLocation);
     }
 }
