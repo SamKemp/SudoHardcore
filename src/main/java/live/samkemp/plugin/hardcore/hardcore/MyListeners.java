@@ -13,7 +13,7 @@ public class MyListeners implements Listener
     {
         Hardcore.NoDeaths++;
 
-        String WorldName = "World-" + event.getPlayer().getDisplayName() + "-" + Hardcore.NoDeaths;
+        String WorldName = Hardcore.RunKey + "_World-" + event.getPlayer().getDisplayName() + "-" + Hardcore.NoDeaths;
 
         event.getPlayer().getInventory().clear();
 
