@@ -13,18 +13,18 @@ public class MyListeners implements Listener
     {
         Hardcore.NoDeaths++;
 
-        Location RespawnLocation = Bukkit.getServer().getWorld("world").getSpawnLocation();
+        String WorldName = "World-" + event.getPlayer().getDisplayName() + "-" + Hardcore.NoDeaths;
 
         event.getPlayer().getInventory().clear();
 
-        World NewWorld = new WorldCreator("World" + Hardcore.NoDeaths).generateStructures(true).type(WorldType.NORMAL).createWorld();
+        World NewWorld = new WorldCreator(WorldName).generateStructures(true).type(WorldType.NORMAL).createWorld();
         NewWorld.setDifficulty(Difficulty.HARD);
         NewWorld.setKeepSpawnInMemory(false);
 
         if(!event.getPlayer().getWorld().getName().equalsIgnoreCase("world"))
             Bukkit.getServer().unloadWorld(event.getPlayer().getWorld(), true);
 
-        RespawnLocation = NewWorld.getSpawnLocation();
+        Location RespawnLocation = NewWorld.getSpawnLocation();
 
         event.setRespawnLocation(RespawnLocation);
     }
